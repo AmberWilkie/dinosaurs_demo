@@ -7,6 +7,10 @@ RSpec.describe Dinosaur, type: :model do
     it { is_expected.to have_db_column :museum_number}
   end
 
+  describe 'Association' do
+    it { is_expected.to have_many :bones }
+  end
+  
   describe 'Validations' do
     it { is_expected.to validate_presence_of :museum_number}
   end

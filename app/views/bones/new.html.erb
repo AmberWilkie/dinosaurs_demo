@@ -1,0 +1,7 @@
+<h2>New bone for <%= @dinosaur.name %></h2>
+
+<%= form_for [@dinosaur, @bone] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit 'Submit' %>
+<% end %>

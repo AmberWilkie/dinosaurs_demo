@@ -1,0 +1,14 @@
+<h2><%= @dinosaur.name %>'s awesome profile</h2>
+
+<%= link_to 'Add a bone', new_dinosaur_bone_path(@dinosaur) %>
+
+
+<% unless @dinosaur.bones.empty? %>
+  <h4><%= @dinosaur.name %>'s bones</h4>
+
+  <ul>
+    <% @dinosaur.bones.each do |bone| %>
+      <li><%= bone.name %></li>
+    <% end %>
+  </ul>
+<% end %>
